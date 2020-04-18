@@ -56,7 +56,7 @@ An alternative way to test API, you can use the Postman collection that contains
 
 * Right click on the imported collection to set variables for the collection.
   <p align="left">
-    <image src="images/import-collection-4.png" width="45%">
+    <image src="images/import-collection-4.png" width="35%">
   </p>
 
 * Provide variables for the collection.Note that the token Id can get from web browser console while you succeed authentication step by logging with Google account.
