@@ -28,7 +28,7 @@
     callbackUrl: 'http://localhost:3000/callback'
   }
   ```
-* Run below command to start the local webserver and you can interact with the React application and test API functionalities of Serverless Todo App. Access `http://localhost:3000` on your browser to access the application.
+* Run below commands to start the local webserver and you can interact with the React application and test API functionalities of Serverless Todo App. Access `http://localhost:3000` on your browser to access the application.
   ```bash
   cd client
   npm install
