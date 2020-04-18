@@ -1,5 +1,5 @@
 # Introduction
-* This project is to demonstrate a simple TODO application writen in NodeJS as backend and ReactJS as front end. The backend project is deployed to AWS services including Lambda to host NodeJS logic, API Gateway to handle HTTP request, S3 to store images and DynamoDB to store user's TODO records. The process is supported by Serverless framework which produces CloudFormation template to start building expected infrastructure within AWS services.
+* This project is to demonstrate a simple TODO application writen in NodeJS as backend and ReactJS as front end. The backend project is deployed to AWS services including Lambda to host NodeJS project, API Gateway to HTTP requests, S3 to store images and DynamoDB to store user's TODO records. The process is supported by Serverless framework which produces CloudFormation template to start building expected infrastructure within AWS services.
 * This application will allow creating/removing/updating/fetching TODO items. Each TODO item can optionally have an attachment image. Each user only has access to TODO items that he/she has created.
   <p align="center">
     <image src="images/todo-app.jpg" width="70%">
@@ -28,7 +28,7 @@
     callbackUrl: 'http://localhost:3000/callback'
   }
   ```
-* Run below commands to start the local webserver and you can interact with the React application and test API functionalities of Serverless Todo App. Access `http://localhost:3000` on your browser to access the application.
+* Run below commands to start the local webserver and you can interact with the React application and test API functionalities of Serverless Todo App. Go to `http://localhost:3000` on your browser to access the application.
   ```bash
   cd client
   npm install
@@ -41,12 +41,12 @@ An alternative way to test API, you can use the Postman collection that contains
 
 * Click on the import button:
   <p align="left">
-    <image src="images/import-collection-1.png" width="40%">
+    <image src="images/import-collection-1.png" width="35%">
   </p>
 
 * Click on the "Choose Files":
   <p align="left">
-    <image src="images/import-collection-2.png" width="50%">
+    <image src="images/import-collection-2.png" width="40%">
   </p>
 
 * Select a file to import:
@@ -56,7 +56,7 @@ An alternative way to test API, you can use the Postman collection that contains
 
 * Right click on the imported collection to set variables for the collection. Note that the token Id can get from web browser console while you succeed authentication step by logging with Google account.
   <p align="left">
-    <image src="images/import-collection-4.png" width="50%">
+    <image src="images/import-collection-4.png" width="45%">
   </p>
 
 * Provide variables for the collection (similarly to how this was done in the course):
