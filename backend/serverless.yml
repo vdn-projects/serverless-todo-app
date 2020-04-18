@@ -31,7 +31,6 @@ provider:
     TODOS_TABLE: Todos-${self:provider.stage}
     USER_ID_INDEX: UserIdIndex
     IMAGES_S3_BUCKET: images-o4wzvso5-${self:provider.stage}
-    AUTH_0_SECRET: M4agQWCRYSMUGkwv5WUyolAs9bIIQ8BWf2Ra_WZgzFiFCyg_apfCKWUbuIIaN806
     SIGNED_URL_EXPIRATION: 300
 
 custom:
@@ -88,8 +87,11 @@ functions:
     iamRoleStatements:
       - Effect: Allow
         Action:
-          - dynamodb:Scan
-        Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
+          - dynamodb:Query
+          # - dynamodb:Scan
+        Resource:
+          - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
+          # - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}/index/${self:provider.environment.USER_ID_INDEX}
 
   CreateTodo:
     handler: src/lambda/http/createTodo.handler
