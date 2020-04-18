@@ -1,7 +1,9 @@
 # Introduction
 * This project is to demonstrate a simple TODO application writen in NodeJS. It backend includes Lambda function to handle request collected from API Gateway.
 * This application will allow creating/removing/updating/fetching TODO items. Each TODO item can optionally have an attachment image. Each user only has access to TODO items that he/she has created.
-
+  <p align="center">
+    <image src="images/todo-app.jpg" width="70%">
+  </p>
 # Usage
 ## Backend
 * Configure the asymmetrically encrypted JWT tokens by passing JWK endpoint from your Auth0 application to `jwksUrl` in `backen/src/lambda/auth/auth0Authorizer.ts`
