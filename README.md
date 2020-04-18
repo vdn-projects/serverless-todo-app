@@ -37,7 +37,7 @@
 
 # API test with Postman collection
 
-An alternative way to test API, you can use the Postman collection that contains sample requests. You can find a Postman collection in this project. To import this collection, do the following.
+Apart from interating on frontend part, there is an alternative way to test API is to use the Postman collection `Final Project.postman_collection.json` that contains sample requests. To import this collection, do the following.
 
 * Click on the import button:
   <p align="left">
