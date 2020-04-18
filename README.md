@@ -1,5 +1,5 @@
 # Introduction
-* This project is to demonstrate a simple TODO application writen in NodeJS. It backend includes Lambda function to hand request collected from API Gateway.
+* This project is to demonstrate a simple TODO application writen in NodeJS. It backend includes Lambda function to handle request collected from API Gateway.
 * This application will allow creating/removing/updating/fetching TODO items. Each TODO item can optionally have an attachment image. Each user only has access to TODO items that he/she has created.
 
 # Usage
