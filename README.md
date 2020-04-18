@@ -1,5 +1,5 @@
 # Introduction
-* This project is to demonstrate a simple TODO application writen in NodeJS. It backend includes Lambda function to handle request collected from API Gateway.
+* This project is to demonstrate a simple TODO application writen in NodeJS as backend and ReactJS as front end. The backend project is deployed to AWS services including Lambda to host NodeJS logic, API Gateway to handle HTTP request, S3 to store images and DynamoDB to store user's TODO records. The process is supported by Serverless framework which produces CloudFormation template to start building expected infrastructure within AWS services.
 * This application will allow creating/removing/updating/fetching TODO items. Each TODO item can optionally have an attachment image. Each user only has access to TODO items that he/she has created.
   <p align="center">
     <image src="images/todo-app.jpg" width="70%">
@@ -41,7 +41,7 @@ An alternative way to test API, you can use the Postman collection that contains
 
 * Click on the import button:
   <p align="left">
-    <image src="images/import-collection-1.png" width="50%">
+    <image src="images/import-collection-1.png" width="40%">
   </p>
 
 * Click on the "Choose Files":
@@ -56,7 +56,7 @@ An alternative way to test API, you can use the Postman collection that contains
 
 * Right click on the imported collection to set variables for the collection. Note that the token Id can get from web browser console while you succeed authentication step by logging with Google account.
   <p align="left">
-    <image src="images/import-collection-4.png" width="60%">
+    <image src="images/import-collection-4.png" width="50%">
   </p>
 
 * Provide variables for the collection (similarly to how this was done in the course):
