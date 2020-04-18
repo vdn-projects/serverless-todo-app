@@ -27,16 +27,27 @@ export class TodoAccess {
     ) {}
 
     public async getAllTodos(userId: string): Promise<TodoItem[]> {
+        // const result = await this.docClient
+        //     .scan({
+        //         TableName: this.todosTable,
+        //         FilterExpression: 'userId = :userId',
+        //         ExpressionAttributeValues: {
+        //             ':userId': userId,
+        //         },
+        //     })
+        //     .promise();
+
         const result = await this.docClient
-            .scan({
+            .query({
                 TableName: this.todosTable,
-                FilterExpression: 'userId = :userId',
+                IndexName: this.userIdIndex,
+                KeyConditionExpression: 'userId = :userId',
                 ExpressionAttributeValues: {
                     ':userId': userId,
-                },
+                }
             })
             .promise();
-        
+
         const items = result.Items;
         return items as TodoItem[];
     }

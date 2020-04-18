@@ -26,6 +26,11 @@ const deleteTodoHandler: APIGatewayProxyHandler = async (
 
     return {
         statusCode: 204,
+        //https://serverless.com/blog/cors-api-gateway-survival-guide/#cors-preflight-requests
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': true,
+        },
         body: '',
     };
 };

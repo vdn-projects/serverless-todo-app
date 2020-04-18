@@ -26,6 +26,11 @@ const createTodoHandler: APIGatewayProxyHandler = async (
     const newItem = await createTodo(newTodo, jwtToken);
     return {
         statusCode: 201,
+        //https://serverless.com/blog/cors-api-gateway-survival-guide/#cors-preflight-requests
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Credentials': true,
+        },
         body: JSON.stringify({
             newItem,
         }),
